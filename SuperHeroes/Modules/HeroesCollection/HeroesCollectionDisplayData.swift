@@ -11,4 +11,5 @@ import Viperit
 
 class HeroesCollectionDisplayData: DisplayData {
 
+    let reuseIdentifier = "cell"
 }

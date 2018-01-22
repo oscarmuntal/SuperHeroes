@@ -1,12 +1,17 @@
 PODS:
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
   - Viperit (1.0.0)
 
 DEPENDENCIES:
+  - SDWebImage
   - Viperit
 
 SPEC CHECKSUMS:
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   Viperit: 9b4b2614a2e3806cb2a86b99715f7b71b6486d65
 
-PODFILE CHECKSUM: 77f47588e6a1c891158e15daf43fcb9fc41b7a77
+PODFILE CHECKSUM: bc186d27aed3b327139f40ac6f5bbdafb8b6aa56
 
 COCOAPODS: 1.4.0

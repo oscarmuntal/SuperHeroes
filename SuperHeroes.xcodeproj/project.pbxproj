@@ -22,6 +22,7 @@
 		1FC49AE2201688C200447E65 /* HeroesCollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADC201688C200447E65 /* HeroesCollectionRouter.swift */; };
 		1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */; };
 		1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */; };
+		1FC49AE820168F7A00447E65 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		1FC49ADC201688C200447E65 /* HeroesCollectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionRouter.swift; sourceTree = "<group>"; };
 		1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionInteractor.swift; sourceTree = "<group>"; };
 		1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionView.swift; sourceTree = "<group>"; };
+		1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		1FC49AE5201688D800447E65 /* HeroesCollection */ = {
 			isa = PBXGroup;
 			children = (
+				1FC49AE620168F6E00447E65 /* Cells */,
 				1FC49AD9201688C200447E65 /* HeroesCollection.storyboard */,
 				1FC49ADA201688C200447E65 /* HeroesCollectionDisplayData.swift */,
 				1FC49ADB201688C200447E65 /* HeroesCollectionPresenter.swift */,
@@ -190,6 +193,14 @@
 				1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */,
 			);
 			path = HeroesCollection;
+			sourceTree = "<group>";
+		};
+		1FC49AE620168F6E00447E65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		52742629EA20C07E401DF919 /* Frameworks */ = {
@@ -460,10 +471,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Viperit/Viperit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Viperit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +511,7 @@
 			files = (
 				1FC49AD82016884D00447E65 /* AppModules.swift in Sources */,
 				1F4048F2201684620074D21B /* ViewController.swift in Sources */,
+				1FC49AE820168F7A00447E65 /* MyCollectionViewCell.swift in Sources */,
 				1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */,
 				1FC49AE2201688C200447E65 /* HeroesCollectionRouter.swift in Sources */,
 				1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */,
