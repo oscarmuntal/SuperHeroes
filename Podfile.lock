@@ -1,17 +1,23 @@
 PODS:
+  - Alamofire (4.6.0)
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SwiftyJSON (4.0.0)
   - Viperit (1.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
   - SDWebImage
+  - SwiftyJSON
   - Viperit
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Viperit: 9b4b2614a2e3806cb2a86b99715f7b71b6486d65
 
-PODFILE CHECKSUM: bc186d27aed3b327139f40ac6f5bbdafb8b6aa56
+PODFILE CHECKSUM: 9626393318c133b94b7791a0f03fe65c19e6bd7a
 
 COCOAPODS: 1.4.0

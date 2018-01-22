@@ -6,6 +6,8 @@ target 'SuperHeroes' do
   use_frameworks!
   pod 'Viperit'
   pod 'SDWebImage'
+  pod 'Alamofire', '~> 4.3'
+  pod 'SwiftyJSON'
   # Pods for SuperHeroes
 
   target 'SuperHeroesTests' do
