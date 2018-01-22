@@ -15,6 +15,13 @@
 		1F4048FA201684620074D21B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4048F8201684620074D21B /* LaunchScreen.storyboard */; };
 		1F404905201684620074D21B /* SuperHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F404904201684620074D21B /* SuperHeroesTests.swift */; };
 		1F404910201684620074D21B /* SuperHeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40490F201684620074D21B /* SuperHeroesUITests.swift */; };
+		1FC49AD82016884D00447E65 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AD72016884D00447E65 /* AppModules.swift */; };
+		1FC49ADF201688C200447E65 /* HeroesCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC49AD9201688C200447E65 /* HeroesCollection.storyboard */; };
+		1FC49AE0201688C200447E65 /* HeroesCollectionDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADA201688C200447E65 /* HeroesCollectionDisplayData.swift */; };
+		1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADB201688C200447E65 /* HeroesCollectionPresenter.swift */; };
+		1FC49AE2201688C200447E65 /* HeroesCollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADC201688C200447E65 /* HeroesCollectionRouter.swift */; };
+		1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */; };
+		1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +61,13 @@
 		1F40490F201684620074D21B /* SuperHeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesUITests.swift; sourceTree = "<group>"; };
 		1F404911201684620074D21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA0F263247B71DE6756FB86 /* Pods-SuperHeroesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesTests/Pods-SuperHeroesTests.release.xcconfig"; sourceTree = "<group>"; };
+		1FC49AD72016884D00447E65 /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
+		1FC49AD9201688C200447E65 /* HeroesCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroesCollection.storyboard; sourceTree = "<group>"; };
+		1FC49ADA201688C200447E65 /* HeroesCollectionDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionDisplayData.swift; sourceTree = "<group>"; };
+		1FC49ADB201688C200447E65 /* HeroesCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionPresenter.swift; sourceTree = "<group>"; };
+		1FC49ADC201688C200447E65 /* HeroesCollectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionRouter.swift; sourceTree = "<group>"; };
+		1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionInteractor.swift; sourceTree = "<group>"; };
+		1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionView.swift; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1F4048EF201684620074D21B /* AppDelegate.swift */,
+				1FC49AD62016882900447E65 /* Modules */,
 				1F4048F1201684620074D21B /* ViewController.swift */,
 				1F4048F3201684620074D21B /* Main.storyboard */,
 				1F4048F6201684620074D21B /* Assets.xcassets */,
@@ -153,6 +168,28 @@
 				1F404911201684620074D21B /* Info.plist */,
 			);
 			path = SuperHeroesUITests;
+			sourceTree = "<group>";
+		};
+		1FC49AD62016882900447E65 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AD72016884D00447E65 /* AppModules.swift */,
+				1FC49AE5201688D800447E65 /* HeroesCollection */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1FC49AE5201688D800447E65 /* HeroesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AD9201688C200447E65 /* HeroesCollection.storyboard */,
+				1FC49ADA201688C200447E65 /* HeroesCollectionDisplayData.swift */,
+				1FC49ADB201688C200447E65 /* HeroesCollectionPresenter.swift */,
+				1FC49ADC201688C200447E65 /* HeroesCollectionRouter.swift */,
+				1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */,
+				1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */,
+			);
+			path = HeroesCollection;
 			sourceTree = "<group>";
 		};
 		52742629EA20C07E401DF919 /* Frameworks */ = {
@@ -281,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC49ADF201688C200447E65 /* HeroesCollection.storyboard in Resources */,
 				1F4048FA201684620074D21B /* LaunchScreen.storyboard in Resources */,
 				1F4048F7201684620074D21B /* Assets.xcassets in Resources */,
 				1F4048F5201684620074D21B /* Main.storyboard in Resources */,
@@ -458,8 +496,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC49AD82016884D00447E65 /* AppModules.swift in Sources */,
 				1F4048F2201684620074D21B /* ViewController.swift in Sources */,
+				1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */,
+				1FC49AE2201688C200447E65 /* HeroesCollectionRouter.swift in Sources */,
+				1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */,
+				1FC49AE0201688C200447E65 /* HeroesCollectionDisplayData.swift in Sources */,
 				1F4048F0201684620074D21B /* AppDelegate.swift in Sources */,
+				1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
