@@ -45,6 +45,7 @@ final class HeroesCollectionView: UserInterface {
 extension HeroesCollectionView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.onHeroTapped(self.superHeroes[indexPath.row])
     }
     
 }

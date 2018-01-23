@@ -10,6 +10,13 @@ import Foundation
 import Viperit
 
 class HeroesCollectionRouter: Router {
+    
+    func showHeroDetail(_ hero: SuperHero) {
+        guard   let detailRouter = AppModules.HeroDetail.build().router as? HeroDetailRouter,
+            let vc = self.presenter._view else { return }
+        
+        detailRouter.showHeroDetail(hero: hero, fromVC: vc)
+    }
 }
 
 // MARK: - VIPER COMPONENTS API (Auto-generated code)

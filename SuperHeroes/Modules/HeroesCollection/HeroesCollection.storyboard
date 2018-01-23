@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-D5-y9Z" userLabel="marvel">
-                                <rect key="frame" x="16" y="20" width="343" height="142"/>
+                                <rect key="frame" x="16" y="64" width="343" height="142"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R31-O8-eYY">
-                                <rect key="frame" x="16" y="162" width="343" height="405"/>
+                                <rect key="frame" x="16" y="206" width="343" height="361"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dvB-Lv-7wt">
                                     <size key="itemSize" width="115" height="162"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jki-Vr-hdg" userLabel="Empty List">
-                                <rect key="frame" x="66" y="212" width="243" height="100"/>
+                                <rect key="frame" x="66" y="256" width="243" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="3oN-O2-QNS"/>
                                 </constraints>
@@ -130,6 +130,7 @@
                             <constraint firstItem="jki-Vr-hdg" firstAttribute="top" secondItem="4VD-D5-y9Z" secondAttribute="bottom" constant="50" id="yGo-zz-O2m"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rYu-sj-EZM"/>
                     <connections>
                         <outlet property="collectionView" destination="R31-O8-eYY" id="md1-Up-QU0"/>
                         <outlet property="emptyListLabel" destination="jki-Vr-hdg" id="i2I-R4-ylz"/>
@@ -137,7 +138,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293.60000000000002" y="355.7721139430285"/>
+            <point key="canvasLocation" x="632.79999999999995" y="355.7721139430285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mP0-bK-buW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UaW-8p-zkZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yDk-6V-nM4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xqD-av-Raz" kind="relationship" relationship="rootViewController" id="xmw-JR-ufa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eB5-8x-bsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="356"/>
         </scene>
     </scenes>
     <resources>

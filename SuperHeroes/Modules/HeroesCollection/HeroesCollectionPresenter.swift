@@ -35,6 +35,10 @@ class HeroesCollectionPresenter: Presenter {
             failFetchSuperHeroes(error)
         }
     }
+    
+    func onHeroTapped(_ hero: SuperHero) {
+        router.showHeroDetail(hero)
+    }
 }
 
 
