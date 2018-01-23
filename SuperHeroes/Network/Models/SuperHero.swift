@@ -28,7 +28,7 @@ class SuperHero {
         self.name = data["name"].stringValue
         self.description = data["description"].stringValue
         self.modified = data["modified"].stringValue
-        self.thumbnail = data["thumbnail"]["path"].stringValue + data["thumbnail"]["extension"].stringValue
+        self.thumbnail = data["thumbnail"]["path"].stringValue + "." + data["thumbnail"]["extension"].stringValue
         
         //TODO pending to parse the rest of the lists
     }

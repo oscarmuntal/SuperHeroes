@@ -13,8 +13,16 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var widthConstraits: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraits: NSLayoutConstraint!
+    
+    func configure(superHero: SuperHero) {
+        myLabel.text = superHero.name
+        setImage(url: superHero.thumbnail)
+    }
     
     func setImage(url: String) {
+        self.heightConstraits = self.widthConstraits
         heroImage.contentMode = .center
         heroImage.backgroundColor = UIColor.lightGray
         

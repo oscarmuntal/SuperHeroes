@@ -29,27 +29,34 @@
                                 <rect key="frame" x="16" y="162" width="343" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dvB-Lv-7wt">
-                                    <size key="itemSize" width="115" height="115"/>
+                                    <size key="itemSize" width="115" height="162"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8f8-BG-xaM" customClass="MyCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="162"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-Qc-CLT">
-                                                    <rect key="frame" x="8" y="8" width="99" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-Qc-CLT">
+                                                    <rect key="frame" x="8" y="8" width="99" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Sim-pA-7sP"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53X-Mi-tbC">
-                                                    <rect key="frame" x="8" y="33.5" width="99" height="73.5"/>
+                                                    <rect key="frame" x="8" y="43" width="99" height="120.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="99" id="Py7-1J-Nxx"/>
+                                                        <constraint firstAttribute="height" constant="120.5" id="oDP-gn-HYX"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -63,8 +70,10 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="53X-Mi-tbC" secondAttribute="trailing" id="zfq-QJ-Vai"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="heightConstraits" destination="oDP-gn-HYX" id="YYA-ky-leQ"/>
                                             <outlet property="heroImage" destination="53X-Mi-tbC" id="wJn-BU-hwQ"/>
                                             <outlet property="myLabel" destination="ARI-Qc-CLT" id="wCx-GI-9lw"/>
+                                            <outlet property="widthConstraits" destination="Py7-1J-Nxx" id="HPB-bh-7Zi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -128,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="295" y="356"/>
+            <point key="canvasLocation" x="293.60000000000002" y="355.7721139430285"/>
         </scene>
     </scenes>
     <resources>
