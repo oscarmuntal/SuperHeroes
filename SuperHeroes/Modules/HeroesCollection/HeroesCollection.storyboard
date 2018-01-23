@@ -42,17 +42,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-Qc-CLT">
-                                                    <rect key="frame" x="8" y="8" width="99" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="OMF-ZL-7gZ"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-Qc-CLT">
+                                                    <rect key="frame" x="8" y="8" width="99" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53X-Mi-tbC">
-                                                    <rect key="frame" x="8" y="35" width="99" height="72"/>
+                                                    <rect key="frame" x="8" y="33.5" width="99" height="73.5"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -71,6 +68,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xqD-av-Raz" id="Z9I-Ta-eNt"/>
+                                    <outlet property="delegate" destination="xqD-av-Raz" id="NI8-af-8Bb"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jki-Vr-hdg" userLabel="Empty List">
                                 <rect key="frame" x="66" y="212" width="243" height="100"/>

@@ -8,6 +8,7 @@ target 'SuperHeroes' do
   pod 'SDWebImage'
   pod 'Alamofire', '~> 4.3'
   pod 'SwiftyJSON'
+  pod 'SwiftHash'
   # Pods for SuperHeroes
 
   target 'SuperHeroesTests' do

@@ -8,8 +8,33 @@
 
 import Foundation
 import Viperit
+import SwiftyJSON
 
 class HeroesCollectionPresenter: Presenter {
+    
+    func getSuperHeroes(updateUI: @escaping ObjectClosure<[SuperHero]>, failFetchSuperHeroes: @escaping RequestErrorBlock) {
+        
+        interactor.getSuperHeroes(successBlock: { response in
+            if let response = response {
+                let data = response["data"]
+                guard let results: [JSON] = data["results"].array else { return }
+                
+                if results != nil {
+                    var superHeroes: [SuperHero] = []
+                    for result in results {
+                        let superHero = SuperHero()
+                        superHero.parseSuperHero(data: result)
+                        superHeroes.append(superHero)
+                    }
+                    updateUI(superHeroes)
+                } else {
+                    failFetchSuperHeroes(APIError())
+                }
+            }
+        }) { error in
+            failFetchSuperHeroes(error)
+        }
+    }
 }
 
 

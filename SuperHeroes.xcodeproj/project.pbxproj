@@ -23,6 +23,10 @@
 		1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */; };
 		1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */; };
 		1FC49AE820168F7A00447E65 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */; };
+		1FC49AEB2016977200447E65 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AEA2016977200447E65 /* ApiManager.swift */; };
+		1FC49AEF2016980400447E65 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AEE2016980400447E65 /* Typealiases.swift */; };
+		1FC49AF2201698AB00447E65 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AF1201698AB00447E65 /* APIError.swift */; };
+		1FC49AF7201783E800447E65 /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AF6201783E800447E65 /* SuperHero.swift */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,10 @@
 		1FC49ADD201688C200447E65 /* HeroesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionInteractor.swift; sourceTree = "<group>"; };
 		1FC49ADE201688C200447E65 /* HeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionView.swift; sourceTree = "<group>"; };
 		1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FC49AEA2016977200447E65 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		1FC49AEE2016980400447E65 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		1FC49AF1201698AB00447E65 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		1FC49AF6201783E800447E65 /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +153,10 @@
 			children = (
 				1F4048EF201684620074D21B /* AppDelegate.swift */,
 				1FC49AD62016882900447E65 /* Modules */,
-				1F4048F1201684620074D21B /* ViewController.swift */,
+				1FC49AE9201696F600447E65 /* Network */,
+				1FC49AEC201697EA00447E65 /* Common */,
 				1F4048F3201684620074D21B /* Main.storyboard */,
+				1F4048F1201684620074D21B /* ViewController.swift */,
 				1F4048F6201684620074D21B /* Assets.xcassets */,
 				1F4048F8201684620074D21B /* LaunchScreen.storyboard */,
 				1F4048FB201684620074D21B /* Info.plist */,
@@ -201,6 +211,32 @@
 				1FC49AE720168F7A00447E65 /* MyCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		1FC49AE9201696F600447E65 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AEA2016977200447E65 /* ApiManager.swift */,
+				1FC49AF0201698A200447E65 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1FC49AEC201697EA00447E65 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AEE2016980400447E65 /* Typealiases.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1FC49AF0201698A200447E65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49AF1201698AB00447E65 /* APIError.swift */,
+				1FC49AF6201783E800447E65 /* SuperHero.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		52742629EA20C07E401DF919 /* Frameworks */ = {
@@ -473,6 +509,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Viperit/Viperit.framework",
 			);
@@ -480,6 +517,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Viperit.framework",
 			);
@@ -515,10 +553,14 @@
 			files = (
 				1FC49AD82016884D00447E65 /* AppModules.swift in Sources */,
 				1F4048F2201684620074D21B /* ViewController.swift in Sources */,
+				1FC49AEB2016977200447E65 /* ApiManager.swift in Sources */,
 				1FC49AE820168F7A00447E65 /* MyCollectionViewCell.swift in Sources */,
 				1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */,
+				1FC49AF2201698AB00447E65 /* APIError.swift in Sources */,
 				1FC49AE2201688C200447E65 /* HeroesCollectionRouter.swift in Sources */,
+				1FC49AF7201783E800447E65 /* SuperHero.swift in Sources */,
 				1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */,
+				1FC49AEF2016980400447E65 /* Typealiases.swift in Sources */,
 				1FC49AE0201688C200447E65 /* HeroesCollectionDisplayData.swift in Sources */,
 				1F4048F0201684620074D21B /* AppDelegate.swift in Sources */,
 				1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */,

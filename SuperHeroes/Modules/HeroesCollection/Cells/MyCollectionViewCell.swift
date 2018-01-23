@@ -1,9 +1,9 @@
 //
 //  MyCollectionViewCell.swift
-//  Pokedex
+//  SuperHeroes
 //
-//  Created by Òscar Muntal on 02/11/2017.
-//  Copyright © 2017 Òscar Muntal. All rights reserved.
+//  Created by Òscar Muntal on 22/01/2018.
+//  Copyright © 2018 Muntalapps. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,6 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var heroImage: UIImageView!
     
     func setImage(url: String) {
-        heroImage.image = UIImage(named: "")
         heroImage.contentMode = .center
         heroImage.backgroundColor = UIColor.lightGray
         
