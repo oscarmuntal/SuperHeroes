@@ -18,11 +18,11 @@ class HeroesCollectionRouter: Router {
         detailRouter.showHeroDetail(hero: hero, fromVC: vc)
     }
     
-    func showFilterScreen(_ filter: String) {
+    func showFilterScreen(filter: String, setFilter: @escaping ObjectClosure<[SuperHero]>, failFetchSuperHeroes: @escaping RequestErrorBlock) {
         guard   let filterScreenRouter = AppModules.FilterScreen.build().router as? FilterScreenRouter,
             let vc = self.presenter._view else { return }
         
-        filterScreenRouter.showFilterScreen(filter: filter, fromVC: vc)
+        filterScreenRouter.showFilterScreen(filter: filter, fromVC: vc, setFilter: setFilter, failFetchSuperHeroes: failFetchSuperHeroes)
     }
 }
 

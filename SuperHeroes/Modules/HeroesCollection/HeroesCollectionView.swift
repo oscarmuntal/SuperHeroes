@@ -16,8 +16,10 @@ protocol HeroesCollectionViewInterface {
 //MARK: HeroesCollectionView Class
 final class HeroesCollectionView: UserInterface {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var emptyListLabel: UILabel!
+    @IBOutlet weak var filterButton: UIButton!
     @IBAction func filterButtonAction(_ sender: Any) {
         filterButtonTapped()
     }
@@ -26,34 +28,65 @@ final class HeroesCollectionView: UserInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoader()
         presenter.getSuperHeroes(updateUI: { superHeroes in
+            self.hideLoader()
             self.setupUI(superHeroes)
-            
         }) { error in
             //TODO: use error from API
         }
     }
     
-    func setupUI(_ superHeroes: [SuperHero]) {
-        for hero in superHeroes {
-            self.superHeroes.append(hero)
-        }
-        self.collectionView.reloadData()
-    }
 }
 
 extension HeroesCollectionView {
+    
+    fileprivate func setupUI(_ superHeroes: [SuperHero]) {
+        emptyListLabel.text = displayData.emptyListText
+        
+        self.superHeroes.removeAll()
+        for hero in superHeroes {
+            self.superHeroes.append(hero)
+        }
+        emptyListLabel.isHidden = self.superHeroes.count != 0
+        self.collectionView.reloadData()
+    }
     
     fileprivate func filterButtonTapped() {
         let alert = UIAlertController(title: displayData.filtersTitle, message: displayData.filtersText, preferredStyle: .actionSheet)
         
         for filter in displayData.filters {
             alert.addAction(UIAlertAction(title: filter, style: .default, handler: { action in
-                self.presenter.filterChosen(filter)
+                self.presenter.filterChosen(filter: filter, setFilter: { superHeroes in
+                    self.hideLoader()
+                    self.setupUI(superHeroes)
+                }) { error in
+                    //TODO: Use error from API
+                }
             }))
         }
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    fileprivate func showLoader() {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+        disableButtons()
+    }
+    
+    private func hideLoader() {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        enableButtons()
+    }
+    
+    private func disableButtons() {
+        filterButton.isEnabled = false
+    }
+    
+    private func enableButtons() {
+        filterButton.isEnabled = true
     }
 }
 

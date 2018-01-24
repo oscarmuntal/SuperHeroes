@@ -19,7 +19,7 @@ class HeroesCollectionPresenter: Presenter {
                 let data = response["data"]
                 guard let results: [JSON] = data["results"].array else { return }
                 
-                if results != nil {
+                if results.count > 0 {
                     var superHeroes: [SuperHero] = []
                     for result in results {
                         let superHero = SuperHero()
@@ -40,8 +40,8 @@ class HeroesCollectionPresenter: Presenter {
         router.showHeroDetail(hero)
     }
     
-    func filterChosen(_ filter: String) {
-        router.showFilterScreen(filter)
+    func filterChosen(filter: String, setFilter: @escaping ObjectClosure<[SuperHero]>, failFetchSuperHeroes: @escaping RequestErrorBlock) {
+        router.showFilterScreen(filter: filter, setFilter: setFilter, failFetchSuperHeroes: failFetchSuperHeroes)
     }
 }
 

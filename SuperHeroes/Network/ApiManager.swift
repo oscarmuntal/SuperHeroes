@@ -50,9 +50,9 @@ class ApiManager: NSObject {
     }
     
     //MARK: - Request Methods
-    func get(path: kAPI_ENDPOINT, successBlock: @escaping RequestSuccessBlock, errorBlock: @escaping RequestErrorBlock) {
+    func get(path: kAPI_ENDPOINT, path2: String = "", successBlock: @escaping RequestSuccessBlock, errorBlock: @escaping RequestErrorBlock) {
         let path = getApiEndpointPath(type: path)
-        let url = baseURL + path
+        let url = baseURL + path + path2
         
         apiManager?.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: [:]).responseJSON(completionHandler: { response in
             

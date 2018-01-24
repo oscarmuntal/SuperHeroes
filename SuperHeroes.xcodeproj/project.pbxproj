@@ -51,6 +51,7 @@
 		1FE3A8612018243000CC566C /* FilterScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85B2018243000CC566C /* FilterScreenRouter.swift */; };
 		1FE3A8622018243000CC566C /* FilterScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85C2018243000CC566C /* FilterScreenInteractor.swift */; };
 		1FE3A8632018243000CC566C /* FilterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85D2018243000CC566C /* FilterScreenView.swift */; };
+		1FE3A86520182B7100CC566C /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A86420182B7100CC566C /* FilterItem.swift */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,7 @@
 		1FE3A85B2018243000CC566C /* FilterScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenRouter.swift; sourceTree = "<group>"; };
 		1FE3A85C2018243000CC566C /* FilterScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenInteractor.swift; sourceTree = "<group>"; };
 		1FE3A85D2018243000CC566C /* FilterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenView.swift; sourceTree = "<group>"; };
+		1FE3A86420182B7100CC566C /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			children = (
 				1FC49AF1201698AB00447E65 /* APIError.swift */,
 				1FC49AF6201783E800447E65 /* SuperHero.swift */,
+				1FE3A86420182B7100CC566C /* FilterItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE3A86520182B7100CC566C /* FilterItem.swift in Sources */,
 				1FC49AD82016884D00447E65 /* AppModules.swift in Sources */,
 				1F4048F2201684620074D21B /* ViewController.swift in Sources */,
 				1FC49AEB2016977200447E65 /* ApiManager.swift in Sources */,

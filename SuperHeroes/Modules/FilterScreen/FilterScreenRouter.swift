@@ -11,8 +11,9 @@ import Viperit
 
 class FilterScreenRouter: Router {
     
-    func showFilterScreen(filter: String, fromVC: UIViewController) {
+    func showFilterScreen(filter: String, fromVC: UIViewController, setFilter: @escaping ObjectClosure<[SuperHero]>, failFetchSuperHeroes: @escaping RequestErrorBlock) {
         presenter.filter = filter
+        presenter.setFilter = setFilter
         guard let vc = self.presenter._view else { return }
         fromVC.navigationController?.pushViewController(vc, animated: true)
     }

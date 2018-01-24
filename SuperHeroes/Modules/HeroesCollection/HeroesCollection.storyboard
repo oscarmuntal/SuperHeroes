@@ -35,7 +35,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8f8-BG-xaM" customClass="MyCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8f8-BG-xaM" customClass="MyCollectionViewCell" customModule="SuperHeroes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="162"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -112,6 +112,9 @@
                                     <constraint firstItem="BgC-ge-nhU" firstAttribute="leading" secondItem="TLj-S5-wCd" secondAttribute="leading" constant="20" id="oS2-jh-USv"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xgm-AX-fyF">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,7 +125,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TLj-S5-wCd" secondAttribute="trailing" id="QNB-zy-IJU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jki-Vr-hdg" secondAttribute="trailing" constant="50" id="XR2-0n-QYW"/>
                             <constraint firstItem="R31-O8-eYY" firstAttribute="top" secondItem="4VD-D5-y9Z" secondAttribute="bottom" id="f6k-cZ-tB9"/>
+                            <constraint firstItem="xgm-AX-fyF" firstAttribute="centerX" secondItem="MqP-ry-Mf3" secondAttribute="centerX" id="fJF-T4-Ewk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="4VD-D5-y9Z" secondAttribute="leading" id="ilb-Pt-eFx"/>
+                            <constraint firstItem="xgm-AX-fyF" firstAttribute="centerY" secondItem="MqP-ry-Mf3" secondAttribute="centerY" id="mEQ-qN-wfS"/>
                             <constraint firstItem="4VD-D5-y9Z" firstAttribute="top" secondItem="EcR-ye-kTk" secondAttribute="bottom" id="msK-cx-QkJ"/>
                             <constraint firstItem="TLj-S5-wCd" firstAttribute="leading" secondItem="MqP-ry-Mf3" secondAttribute="leadingMargin" id="oL8-0G-ryk"/>
                             <constraint firstItem="TLj-S5-wCd" firstAttribute="top" secondItem="R31-O8-eYY" secondAttribute="bottom" id="poC-wB-c9E"/>
@@ -132,8 +137,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="rYu-sj-EZM"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xgm-AX-fyF" id="FGV-Iz-KkV"/>
                         <outlet property="collectionView" destination="R31-O8-eYY" id="md1-Up-QU0"/>
                         <outlet property="emptyListLabel" destination="jki-Vr-hdg" id="i2I-R4-ylz"/>
+                        <outlet property="filterButton" destination="BgC-ge-nhU" id="0I7-dD-HTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
