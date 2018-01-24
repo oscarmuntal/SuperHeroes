@@ -48,11 +48,11 @@ extension HeroDetailView {
 extension HeroDetailView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row > displayData.mandatoryRows {
+        if indexPath.row >= displayData.mandatoryRows {
             let position = indexPath.row - displayData.mandatoryRows
             if let details = presenter.hero?.details {
-                let element = details[position]
-                presenter.showSubDetailsForElement(element)
+                let data = details[position]
+                presenter.showSubDetailsForElement(data)
             }
         }
     }

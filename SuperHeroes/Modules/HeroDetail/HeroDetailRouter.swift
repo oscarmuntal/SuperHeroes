@@ -8,6 +8,7 @@
 
 import Foundation
 import Viperit
+import SwiftyJSON
 
 class HeroDetailRouter: Router {
     
@@ -15,6 +16,13 @@ class HeroDetailRouter: Router {
         presenter.hero = hero
         guard let vc = self.presenter._view else { return }
         fromVC.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showSubDetailsForElement(_ data: JSON) {
+        guard   let subDetailRouter = AppModules.HeroSubDetails.build().router as? HeroSubDetailsRouter,
+            let vc = self.presenter._view else { return }
+        
+        subDetailRouter.showSubDetailsForElement(data: data, fromVC: vc)
     }
 }
 

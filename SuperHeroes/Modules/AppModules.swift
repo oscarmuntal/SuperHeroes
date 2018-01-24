@@ -13,4 +13,5 @@ import Viperit
 enum AppModules: String, ViperitModule {
     case HeroesCollection
     case HeroDetail
+    case HeroSubDetails
 }
