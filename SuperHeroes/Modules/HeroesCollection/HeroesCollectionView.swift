@@ -53,18 +53,25 @@ extension HeroesCollectionView {
     }
     
     fileprivate func filterButtonTapped() {
-        let alert = UIAlertController(title: displayData.filtersTitle, message: displayData.filtersText, preferredStyle: .actionSheet)
-        
-        for filter in displayData.filters {
-            alert.addAction(UIAlertAction(title: filter, style: .default, handler: { action in
-                self.presenter.filterChosen(filter: filter, setFilter: { superHeroes in
-                    self.hideLoader()
-                    self.setupUI(superHeroes)
-                }) { error in
-                    //TODO: Use error from API
-                }
-            }))
+        var alertControllerStyle: UIAlertControllerStyle = .actionSheet
+        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
+            alertControllerStyle = .alert
+        } else {
+            alertControllerStyle = .actionSheet
         }
+            let alert = UIAlertController(title: displayData.filtersTitle, message: displayData.filtersText, preferredStyle: alertControllerStyle)
+            
+            for filter in displayData.filters {
+                alert.addAction(UIAlertAction(title: filter, style: .default, handler: { action in
+                    self.presenter.filterChosen(filter: filter, setFilter: { superHeroes in
+                        self.hideLoader()
+                        self.setupUI(superHeroes)
+                    }) { error in
+                        //TODO: Use error from API
+                    }
+                }))
+            }
+        
         
         self.present(alert, animated: true, completion: nil)
     }

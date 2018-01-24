@@ -39,11 +39,16 @@ final class FilterScreenView: UserInterface {
 extension FilterScreenView {
     
     fileprivate func setupUI(_ items: [FilterItem]) {
+        removeExtraRows()
         for item in items {
             self.filterItems.append(item)
         }
         self.tableView.reloadData()
         self.hideLoader()
+    }
+    
+    fileprivate func removeExtraRows() {
+        tableView.tableFooterView = UIView()
     }
     
     fileprivate func showLoader() {
