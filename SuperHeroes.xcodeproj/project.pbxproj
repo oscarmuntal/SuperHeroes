@@ -45,6 +45,12 @@
 		1FE3A8542018152900CC566C /* HeroSubDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A84E2018152900CC566C /* HeroSubDetailsRouter.swift */; };
 		1FE3A8552018152900CC566C /* HeroSubDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A84F2018152900CC566C /* HeroSubDetailsInteractor.swift */; };
 		1FE3A8562018152900CC566C /* HeroSubDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A8502018152900CC566C /* HeroSubDetailsView.swift */; };
+		1FE3A85E2018243000CC566C /* FilterScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE3A8582018243000CC566C /* FilterScreen.storyboard */; };
+		1FE3A85F2018243000CC566C /* FilterScreenDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A8592018243000CC566C /* FilterScreenDisplayData.swift */; };
+		1FE3A8602018243000CC566C /* FilterScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85A2018243000CC566C /* FilterScreenPresenter.swift */; };
+		1FE3A8612018243000CC566C /* FilterScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85B2018243000CC566C /* FilterScreenRouter.swift */; };
+		1FE3A8622018243000CC566C /* FilterScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85C2018243000CC566C /* FilterScreenInteractor.swift */; };
+		1FE3A8632018243000CC566C /* FilterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A85D2018243000CC566C /* FilterScreenView.swift */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +120,12 @@
 		1FE3A84E2018152900CC566C /* HeroSubDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSubDetailsRouter.swift; sourceTree = "<group>"; };
 		1FE3A84F2018152900CC566C /* HeroSubDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSubDetailsInteractor.swift; sourceTree = "<group>"; };
 		1FE3A8502018152900CC566C /* HeroSubDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSubDetailsView.swift; sourceTree = "<group>"; };
+		1FE3A8582018243000CC566C /* FilterScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterScreen.storyboard; sourceTree = "<group>"; };
+		1FE3A8592018243000CC566C /* FilterScreenDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenDisplayData.swift; sourceTree = "<group>"; };
+		1FE3A85A2018243000CC566C /* FilterScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenPresenter.swift; sourceTree = "<group>"; };
+		1FE3A85B2018243000CC566C /* FilterScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenRouter.swift; sourceTree = "<group>"; };
+		1FE3A85C2018243000CC566C /* FilterScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenInteractor.swift; sourceTree = "<group>"; };
+		1FE3A85D2018243000CC566C /* FilterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenView.swift; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +236,7 @@
 				1FC49AD72016884D00447E65 /* AppModules.swift */,
 				1FC49AE5201688D800447E65 /* HeroesCollection */,
 				1FC49AF82017B54300447E65 /* HeroDetail */,
+				1FE3A8572018241700CC566C /* FilterScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -323,6 +336,19 @@
 				1FE3A8502018152900CC566C /* HeroSubDetailsView.swift */,
 			);
 			path = HeroSubDetails;
+			sourceTree = "<group>";
+		};
+		1FE3A8572018241700CC566C /* FilterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1FE3A8582018243000CC566C /* FilterScreen.storyboard */,
+				1FE3A8592018243000CC566C /* FilterScreenDisplayData.swift */,
+				1FE3A85A2018243000CC566C /* FilterScreenPresenter.swift */,
+				1FE3A85B2018243000CC566C /* FilterScreenRouter.swift */,
+				1FE3A85C2018243000CC566C /* FilterScreenInteractor.swift */,
+				1FE3A85D2018243000CC566C /* FilterScreenView.swift */,
+			);
+			path = FilterScreen;
 			sourceTree = "<group>";
 		};
 		52742629EA20C07E401DF919 /* Frameworks */ = {
@@ -455,6 +481,7 @@
 				1FC49ADF201688C200447E65 /* HeroesCollection.storyboard in Resources */,
 				1FC49B162017DC3A00447E65 /* TextTableViewCell.xib in Resources */,
 				1F4048FA201684620074D21B /* LaunchScreen.storyboard in Resources */,
+				1FE3A85E2018243000CC566C /* FilterScreen.storyboard in Resources */,
 				1FE3A8492017F36C00CC566C /* BasicTableViewCell.xib in Resources */,
 				1FC49B102017DC0C00447E65 /* ImageTableViewCell.xib in Resources */,
 				1F4048F7201684620074D21B /* Assets.xcassets in Resources */,
@@ -646,6 +673,7 @@
 				1F4048F2201684620074D21B /* ViewController.swift in Sources */,
 				1FC49AEB2016977200447E65 /* ApiManager.swift in Sources */,
 				1FC49B022017B56E00447E65 /* HeroDetailRouter.swift in Sources */,
+				1FE3A8602018243000CC566C /* FilterScreenPresenter.swift in Sources */,
 				1FC49AE820168F7A00447E65 /* MyCollectionViewCell.swift in Sources */,
 				1FC49AE4201688C200447E65 /* HeroesCollectionView.swift in Sources */,
 				1FE3A8522018152900CC566C /* HeroSubDetailsDisplayData.swift in Sources */,
@@ -657,8 +685,12 @@
 				1FE3A8562018152900CC566C /* HeroSubDetailsView.swift in Sources */,
 				1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */,
 				1FE3A8542018152900CC566C /* HeroSubDetailsRouter.swift in Sources */,
+				1FE3A8632018243000CC566C /* FilterScreenView.swift in Sources */,
 				1FC49AEF2016980400447E65 /* Typealiases.swift in Sources */,
+				1FE3A8612018243000CC566C /* FilterScreenRouter.swift in Sources */,
+				1FE3A8622018243000CC566C /* FilterScreenInteractor.swift in Sources */,
 				1FC49B0F2017DC0C00447E65 /* ImageTableViewCell.swift in Sources */,
+				1FE3A85F2018243000CC566C /* FilterScreenDisplayData.swift in Sources */,
 				1FC49AE0201688C200447E65 /* HeroesCollectionDisplayData.swift in Sources */,
 				1FC49B152017DC3A00447E65 /* TextTableViewCell.swift in Sources */,
 				1F4048F0201684620074D21B /* AppDelegate.swift in Sources */,

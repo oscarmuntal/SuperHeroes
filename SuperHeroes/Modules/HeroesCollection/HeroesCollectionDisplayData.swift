@@ -12,4 +12,13 @@ import Viperit
 class HeroesCollectionDisplayData: DisplayData {
 
     let reuseIdentifier = "cell"
+    let filtersTitle = "Filters"
+    let filtersText = "Please choose a filter:"
+    
+    let filters: [String] = [
+        "Comics",
+        "Event",
+        "Series",
+        "Story"
+    ]
 }

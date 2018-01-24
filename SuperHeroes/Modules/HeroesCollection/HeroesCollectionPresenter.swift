@@ -39,6 +39,10 @@ class HeroesCollectionPresenter: Presenter {
     func onHeroTapped(_ hero: SuperHero) {
         router.showHeroDetail(hero)
     }
+    
+    func filterChosen(_ filter: String) {
+        router.showFilterScreen(filter)
+    }
 }
 
 

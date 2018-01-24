@@ -17,6 +17,13 @@ class HeroesCollectionRouter: Router {
         
         detailRouter.showHeroDetail(hero: hero, fromVC: vc)
     }
+    
+    func showFilterScreen(_ filter: String) {
+        guard   let filterScreenRouter = AppModules.FilterScreen.build().router as? FilterScreenRouter,
+            let vc = self.presenter._view else { return }
+        
+        filterScreenRouter.showFilterScreen(filter: filter, fromVC: vc)
+    }
 }
 
 // MARK: - VIPER COMPONENTS API (Auto-generated code)

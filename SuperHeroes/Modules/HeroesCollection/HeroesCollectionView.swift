@@ -19,6 +19,7 @@ final class HeroesCollectionView: UserInterface {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var emptyListLabel: UILabel!
     @IBAction func filterButtonAction(_ sender: Any) {
+        filterButtonTapped()
     }
     
     var superHeroes: [SuperHero] = []
@@ -41,6 +42,20 @@ final class HeroesCollectionView: UserInterface {
     }
 }
 
+extension HeroesCollectionView {
+    
+    fileprivate func filterButtonTapped() {
+        let alert = UIAlertController(title: displayData.filtersTitle, message: displayData.filtersText, preferredStyle: .actionSheet)
+        
+        for filter in displayData.filters {
+            alert.addAction(UIAlertAction(title: filter, style: .default, handler: { action in
+                self.presenter.filterChosen(filter)
+            }))
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+}
 
 extension HeroesCollectionView: UICollectionViewDelegate {
     
