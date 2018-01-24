@@ -8,9 +8,14 @@
 
 import Foundation
 import Viperit
+import SwiftyJSON
 
 class HeroDetailPresenter: Presenter {
     var hero: SuperHero?
+    
+    func showSubDetailsForElement(_ element: JSON) {
+        //TODO: show subdetails screen for this hero
+    }
 }
 
 

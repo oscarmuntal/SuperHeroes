@@ -33,6 +33,12 @@
 		1FC49B022017B56E00447E65 /* HeroDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AFC2017B56E00447E65 /* HeroDetailRouter.swift */; };
 		1FC49B032017B56E00447E65 /* HeroDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AFD2017B56E00447E65 /* HeroDetailInteractor.swift */; };
 		1FC49B042017B56E00447E65 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49AFE2017B56E00447E65 /* HeroDetailView.swift */; };
+		1FC49B0F2017DC0C00447E65 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49B0D2017DC0C00447E65 /* ImageTableViewCell.swift */; };
+		1FC49B102017DC0C00447E65 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC49B0E2017DC0C00447E65 /* ImageTableViewCell.xib */; };
+		1FC49B152017DC3A00447E65 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC49B132017DC3A00447E65 /* TextTableViewCell.swift */; };
+		1FC49B162017DC3A00447E65 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC49B142017DC3A00447E65 /* TextTableViewCell.xib */; };
+		1FE3A8482017F36C00CC566C /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A8462017F36C00CC566C /* BasicTableViewCell.swift */; };
+		1FE3A8492017F36C00CC566C /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE3A8472017F36C00CC566C /* BasicTableViewCell.xib */; };
 		56890CB27634DD74B378A271 /* Pods_SuperHeroesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */; };
 		61B48753E1B5D3A127F80DFC /* Pods_SuperHeroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018C20A1B1E451B7E0E1DDB0 /* Pods_SuperHeroes.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +96,12 @@
 		1FC49AFC2017B56E00447E65 /* HeroDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailRouter.swift; sourceTree = "<group>"; };
 		1FC49AFD2017B56E00447E65 /* HeroDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailInteractor.swift; sourceTree = "<group>"; };
 		1FC49AFE2017B56E00447E65 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
+		1FC49B0D2017DC0C00447E65 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		1FC49B0E2017DC0C00447E65 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		1FC49B132017DC3A00447E65 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		1FC49B142017DC3A00447E65 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		1FE3A8462017F36C00CC566C /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		1FE3A8472017F36C00CC566C /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
 		58FF686A163AF92C12EA1DD9 /* Pods-SuperHeroesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroesUITests/Pods-SuperHeroesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		668C7C633F33D65B153BE152 /* Pods_SuperHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABC130FD613CC9743F18CAF /* Pods-SuperHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroes/Pods-SuperHeroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +267,7 @@
 		1FC49AF82017B54300447E65 /* HeroDetail */ = {
 			isa = PBXGroup;
 			children = (
+				1FC49B0C2017DBDD00447E65 /* Cells */,
 				1FC49AF92017B56E00447E65 /* HeroDetail.storyboard */,
 				1FC49AFA2017B56E00447E65 /* HeroDetailDisplayData.swift */,
 				1FC49AFB2017B56E00447E65 /* HeroDetailPresenter.swift */,
@@ -271,6 +284,19 @@
 				1FC49AEE2016980400447E65 /* Typealiases.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		1FC49B0C2017DBDD00447E65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1FC49B0D2017DC0C00447E65 /* ImageTableViewCell.swift */,
+				1FC49B0E2017DC0C00447E65 /* ImageTableViewCell.xib */,
+				1FC49B132017DC3A00447E65 /* TextTableViewCell.swift */,
+				1FC49B142017DC3A00447E65 /* TextTableViewCell.xib */,
+				1FE3A8462017F36C00CC566C /* BasicTableViewCell.swift */,
+				1FE3A8472017F36C00CC566C /* BasicTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		52742629EA20C07E401DF919 /* Frameworks */ = {
@@ -401,7 +427,10 @@
 			files = (
 				1FC49AFF2017B56E00447E65 /* HeroDetail.storyboard in Resources */,
 				1FC49ADF201688C200447E65 /* HeroesCollection.storyboard in Resources */,
+				1FC49B162017DC3A00447E65 /* TextTableViewCell.xib in Resources */,
 				1F4048FA201684620074D21B /* LaunchScreen.storyboard in Resources */,
+				1FE3A8492017F36C00CC566C /* BasicTableViewCell.xib in Resources */,
+				1FC49B102017DC0C00447E65 /* ImageTableViewCell.xib in Resources */,
 				1F4048F7201684620074D21B /* Assets.xcassets in Resources */,
 				1F4048F5201684620074D21B /* Main.storyboard in Resources */,
 			);
@@ -598,12 +627,15 @@
 				1FC49AF7201783E800447E65 /* SuperHero.swift in Sources */,
 				1FC49AE1201688C200447E65 /* HeroesCollectionPresenter.swift in Sources */,
 				1FC49AEF2016980400447E65 /* Typealiases.swift in Sources */,
+				1FC49B0F2017DC0C00447E65 /* ImageTableViewCell.swift in Sources */,
 				1FC49AE0201688C200447E65 /* HeroesCollectionDisplayData.swift in Sources */,
+				1FC49B152017DC3A00447E65 /* TextTableViewCell.swift in Sources */,
 				1F4048F0201684620074D21B /* AppDelegate.swift in Sources */,
 				1FC49B012017B56E00447E65 /* HeroDetailPresenter.swift in Sources */,
 				1FC49AE3201688C200447E65 /* HeroesCollectionInteractor.swift in Sources */,
 				1FC49B002017B56E00447E65 /* HeroDetailDisplayData.swift in Sources */,
 				1FC49B042017B56E00447E65 /* HeroDetailView.swift in Sources */,
+				1FE3A8482017F36C00CC566C /* BasicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

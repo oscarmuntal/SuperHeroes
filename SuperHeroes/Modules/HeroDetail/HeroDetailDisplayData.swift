@@ -11,4 +11,10 @@ import Viperit
 
 class HeroDetailDisplayData: DisplayData {
 
+    let imageTableViewCell = "ImageTableViewCell"
+    let textTableViewCell = "TextTableViewCell"
+    let basicTableViewCell = "BasicTableViewCell"
+    
+    let mandatoryRows = 2
+    
 }

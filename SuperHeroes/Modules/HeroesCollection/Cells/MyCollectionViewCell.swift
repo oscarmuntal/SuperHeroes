@@ -21,7 +21,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         setImage(url: superHero.thumbnail)
     }
     
-    func setImage(url: String) {
+    private func setImage(url: String) {
         self.heightConstraits = self.widthConstraits
         heroImage.contentMode = .center
         heroImage.backgroundColor = UIColor.lightGray
